@@ -1,0 +1,7 @@
+<div class="completion-container">
+    <p>選択内容をご確認ください。</p>
+    <div *ngFor="let choice of choices">
+      <p *ngIf="choice.isSelected">{{ choice.name }}: {{ choice.priority }}位</p>
+    </div>
+    <button mat-raised-button color="primary" (click)="goToResult()">結果を見る</button>
+  </div>
