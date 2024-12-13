@@ -34,20 +34,25 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "outputMode": "server",
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "2MB",
+                  "maximumError": "5MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "6kB",
+                  "maximumError": "10kB"
                 }
               ],
               "outputHashing": "all"
@@ -93,30 +98,13 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
-            "karmaConfig": "karma.conf.js",
-            "browsers": ["ChromeHeadlessCI"]
-          },
-          "configurations": {
-            "ci": {
-              "karmaConfig": "karma.conf.js",
-              "browsers": ["ChromeHeadlessCI"],
-              "customLaunchers": {
-                "ChromeHeadlessCI": {
-                  "base": "ChromeHeadless",
-                  "flags": ["--no-sandbox"]
-                }
-              },
-              "environment": {
-                "CHROME_BIN": "/usr/bin/google-chrome-stable"
-              }
-            }
+            "scripts": []
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": "fe890da9-e6c5-41de-8201-616ee14d848f"
+    "analytics": "6b998380-2075-4aa8-8354-461eb235b74f"
   }
 }

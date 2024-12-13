@@ -1,4 +1,4 @@
-<mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-<main>
+<div class="app-container">
+  <app-progress-bar [currentStep]="currentStep" [totalSteps]="totalSteps"></app-progress-bar>
   <router-outlet></router-outlet>
-</main>
+</div>

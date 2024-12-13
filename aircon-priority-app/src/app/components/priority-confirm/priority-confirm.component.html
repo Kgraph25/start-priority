@@ -1,0 +1,10 @@
+<div class="priority-confirm-container">
+  <h2>選択内容の確認 (ステップ {{ step }})</h2>
+  <div *ngIf="step === 1">
+    <p>最初の選択では、エアコンを選ぶ上で最も重要な要素を3つ選択していただきます。</p>
+  </div>
+  <div class="selected-choices">
+    <p *ngFor="let choice of selectedChoices">{{ choice.name }}</p>
+  </div>
+  <button mat-raised-button color="primary" (click)="navigateToNext()">次へ</button>
+</div>

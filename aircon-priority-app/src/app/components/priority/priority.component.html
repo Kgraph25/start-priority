@@ -1,0 +1,12 @@
+<div class="priority-container">
+  <h2>優先順位を選択してください (ステップ {{ step }})</h2>
+  <div class="choices-container">
+    <button mat-raised-button
+      *ngFor="let choice of choices"
+      [color]="choice.isSelected ? 'primary' : ''"
+      (click)="selectChoice(choice)">
+      {{ choice.name }}
+    </button>
+  </div>
+  <button mat-raised-button color="primary" (click)="navigateToNext()">次へ</button>
+</div>

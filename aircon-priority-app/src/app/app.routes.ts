@@ -1,12 +1,18 @@
 import { Routes } from '@angular/router';
+import { LandingComponent } from './components/landing/landing.component';
+import { PriorityComponent } from './components/priority/priority.component';
+import { PriorityConfirmComponent } from './components/priority-confirm/priority-confirm.component';
+import { QuestionComponent } from './components/question/question.component';
+import { CompletionComponent } from './components/completion/completion.component';
+import { ResultComponent } from './components/result/result.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/landing', pathMatch: 'full' },
-  { path: '/landing', loadChildren: () => import('./landing/landing.module').then(m => m.LandingModule) },
-  { path: '/priority', loadChildren: () => import('./priority/priority.module').then(m => m.PriorityModule) },
-  { path: '/question1', loadChildren: () => import('./question1/question1.module').then(m => m.Question1Module) },
-  { path: '/question2-guide', loadChildren: () => import('./question2-guide/question2-guide.module').then(m => m.Question2GuideModule) },
-  { path: '/question2', loadChildren: () => import('./question2/question2.module').then(m => m.Question2Module) },
-  { path: '/completion', loadChildren: () => import('./completion/completion.module').then(m => m.CompletionModule) },
-  { path: '/result', loadChildren: () => import('./result/result.module').then(m => m.ResultModule) },
+  { path: '', component: LandingComponent },
+  { path: 'priority/1', component: PriorityComponent },
+  { path: 'priority/confirm/1', component: PriorityConfirmComponent },
+  { path: 'priority/2', component: PriorityComponent },
+  { path: 'priority/confirm/2', component: PriorityConfirmComponent },
+  { path: 'question', component: QuestionComponent },
+  { path: 'completion', component: CompletionComponent },
+  { path: 'result', component: ResultComponent },
 ];

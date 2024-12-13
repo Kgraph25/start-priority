@@ -1,0 +1,11 @@
+<div class="question-container">
+  <h2>質問に答えてください</h2>
+  <div *ngFor="let question of questions">
+    <p>{{ question.text }}</p>
+    <mat-form-field>
+      <mat-label>回答</mat-label>
+      <input matInput type="text" (change)="addAnswer(question.id, $any($event.target).value)">
+    </mat-form-field>
+  </div>
+  <button mat-raised-button color="primary" (click)="navigateToCompletion()">完了</button>
+</div>
